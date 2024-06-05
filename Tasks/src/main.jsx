@@ -1,14 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './Index.css'
-// import Hello from './Index.jsx'
-// import './index.css'
 import Navbar from './Component/Navbar'
+import To_Do_List from './Component/To-Do-List'
+import Calculator from './Component/Calculator'
 const Main = () => {
   return (
     <>
-      {/* <Hello /> */}
-      <Navbar/>
+      {/* <Navbar/> */}
+      <To_Do_List/>
+      <Calculator/>
+
     </>
   )
 }
