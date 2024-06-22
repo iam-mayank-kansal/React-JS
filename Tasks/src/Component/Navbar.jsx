@@ -75,7 +75,7 @@ const Navbar = () => {
                     <ul className={`flex gap-8 nav_list ${nav_show ? 'nav_list2' : 'nav_list1'}`}>
                         {(showService ? nav_service_items : nav_items).map((item, index) => (
                             <li
-                                className="navbar_li flex gap-2 items-center cursor-pointer py-[6px] px-1 w-fit text-white  pb-[19px] mt-[14px]"
+                                className="navbar_li flex gap-2 items-center cursor-pointer py-[6px] px-1 w-fit text-white  pb-[19px] mt-[14px] duration-500 text-[22px]"
                                 key={index}
                                 id={`navbar-li-${index}`}
                                 onClick={(e) => {
@@ -101,9 +101,9 @@ const Navbar = () => {
                                 onMouseEnter={index === 2 ? toggleDropdown : null}
                                 onMouseLeave={index === 2 ? toggleDropdown : null}
                             >
-                                {item} {index === 2 && <img src={down_arrow} width="15px" height="10px" className="nav-down-img" />}
+                                {item} {index === 2 && <img src={down_arrow} width="15px" height="10px" className="nav-down-img invert duration-[.3s] rotate-0" />}
                                 {index === 2 && dropdown_show && (
-                                    <ul className="absolute bg-[#2C0955] w-[100vw] h-fit right-0 top-full service-container flex justify-evenly cursor-default p-4"
+                                    <ul className="absolute bg-[#2C0955] w-[100vw] h-fit right-0 top-full service-container flex justify-evenly cursor-default p-4 rounded-b-[10px]"
                                         onMouseEnter={() => {
                                             set_dropdown_show(true);
                                         }} onMouseLeave={() => {
